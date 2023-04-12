@@ -1,15 +1,28 @@
 <script setup lang="ts">
+import {MenuBtt, useMainMenuStore} from "@/store/main_menu";
 
+const store = useMainMenuStore();
+
+const buttons = [
+    {name: "File",  type: MenuBtt.File},
+    {name: "Edit",  type: MenuBtt.Edit},
+    {name: "View",  type: MenuBtt.View},
+    {name: "Tools", type: MenuBtt.Tools},
+    {name: "Help",  type: MenuBtt.Help},
+    {name: "About", type: MenuBtt.About}
+];
 </script>
 
 <template>
   <div>
-    <PrimaryButton class="main-menu-button">  File  </PrimaryButton>
-    <PrimaryButton class="main-menu-button">  Edit  </PrimaryButton>
-    <PrimaryButton class="main-menu-button">  View  </PrimaryButton>
-    <PrimaryButton class="main-menu-button">  Tools </PrimaryButton>
-    <PrimaryButton class="main-menu-button">  Help  </PrimaryButton>
-    <PrimaryButton class="main-menu-button">  About </PrimaryButton>
+    <PrimaryButton class="main-menu-button"
+      v-for="btt in buttons" :key="btt"
+      @click="store.setStatus(btt.type)"
+      @mouseenter="store.mouseInBtt(btt.type)"
+      @mouseleave="store.mouseOutBtt(btt.type)"
+    >
+      {{ btt.name }}
+    </PrimaryButton>
   </div>
 </template>
 
