@@ -29,9 +29,10 @@
 div {
     top: 0;
     left: 0;
-    right: 100%;
+    width: 100%;
+    position: absolute;
     box-shadow: #000000 0 0 1px;
-    background-color: var(--gray800);
+    background-color: var(--gray700);
 }
 .main-menu-button {
     font-size: 12px;

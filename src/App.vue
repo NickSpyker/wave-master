@@ -3,5 +3,6 @@
 </script>
 
 <template>
+  <NavMenu />
   <MainMenu />
 </template>
