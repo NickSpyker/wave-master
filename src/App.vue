@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  Hello, World !
+  <MainMenu />
 </template>

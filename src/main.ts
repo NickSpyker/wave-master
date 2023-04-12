@@ -8,4 +8,15 @@ const app = createApp(App);
 
 app.use(createPinia());
 
+import MainMenu from "@/components/menu/MainMenu.vue";
+app.component("MainMenu", MainMenu);
+
+import HorTile from "@/components/tile/HorTile.vue";
+import VerTile from "@/components/tile/VerTile.vue";
+app.component("HorTile", HorTile);
+app.component("VerTile", VerTile);
+
+import PrimaryButton from "@/components/button/PrimaryButton.vue";
+app.component("PrimaryButton", PrimaryButton);
+
 app.mount("#app");

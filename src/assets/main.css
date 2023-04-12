@@ -1,20 +1,36 @@
 :root {
     /* OneDark theme */
-    --black:  #282c34;
-    --red:    #e06c75;
-    --green:  #98c379;
-    --yellow: #e5c07b;
-    --blue:   #61afef;
-    --purple: #c678dd;
-    --cyan:   #56b6c2;
-    --grey:   #abb2bf;
-    --white:  #ffffff;
+    --black:   #282c34;
+    --red:     #e06c75;
+    --green:   #98c379;
+    --yellow:  #e5c07b;
+    --blue:    #61afef;
+    --purple:  #c678dd;
+    --cyan:    #56b6c2;
+    --grey:    #abb2bf;
+    --white:   #ffffff;
+
+    --gray050: #f5f7fa;
+    --gray100: #e4e7eb;
+    --gray200: #cbd2d9;
+    --gray300: #9aa5b1;
+    --gray400: #7b8794;
+    --gray500: #616e7c;
+    --gray600: #52606d;
+    --gray700: #3e4c59;
+    --gray800: #323f4b;
+    --gray900: #1f2933;
 }
 
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--white);
-    background-color: var(--black);
+    background-color: var(--gray900);
     font-family: "Fira Code", sans-serif;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
 }
