@@ -14,7 +14,4 @@ button {
     background-color: transparent;
     font-family: "Fira Code", sans-serif;
 }
-button:hover {
-    background-color: var(--gray600);
-}
 </style>
