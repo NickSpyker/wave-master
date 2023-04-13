@@ -21,6 +21,8 @@ app.component("HorTile", HorTile);
 app.component("VerTile", VerTile);
 
 import PrimaryButton from "@/components/button/PrimaryButton.vue";
+import MainMenuButton from "@/components/button/MainMenuButton.vue";
 app.component("PrimaryButton", PrimaryButton);
+app.component("MainMenuButton", MainMenuButton);
 
 app.mount("#app");

@@ -1,28 +1,27 @@
 import { defineStore } from "pinia";
 
 export enum MenuBtt {
-    None,
-    File,
-    Edit,
-    View,
-    Tools,
-    Help,
-    About
+    None = "none",
+    File = "file",
+    Edit = "edit",
+    View = "view",
+    Tools = "tools",
+    Help = "help",
+    About = "about"
 }
 
 export const useMainMenuStore = defineStore("MainMenuHandler", {
     state: () => ({
         status: MenuBtt.None as MenuBtt,
         recordMouseBtt: false as boolean,
-        recordMouseScr: false as boolean
+        recordMouseScr: false as boolean,
+        coordX: 0 as number,
+        coordY: 0 as number
     }),
     actions: {
-        getStatus(): MenuBtt
+        setStatus(status: MenuBtt, rect: any): void
         {
-            return this.status;
-        },
-        setStatus(status: MenuBtt): void
-        {
+            console.log(rect);
             this.status = status;
         },
         mouseInBtt(status: MenuBtt): void
