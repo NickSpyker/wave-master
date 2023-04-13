@@ -23,7 +23,7 @@ onMounted(() => btt.value?.focus());
     <PrimaryButton class="menu-btt"
       @click="store.setStatus(props.e, getRect())"
       @mouseenter="store.mouseInBtt(props.e)"
-      @mouseleave="store.mouseOutBtt(props.e)"
+      @mouseleave="store.mouseOutBtt()"
     >
       {{ props.e }}
     </PrimaryButton>

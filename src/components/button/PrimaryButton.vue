@@ -14,4 +14,7 @@ button {
     background-color: transparent;
     font-family: "Fira Code", sans-serif;
 }
+button:hover {
+    cursor: pointer;
+}
 </style>
