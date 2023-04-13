@@ -1,13 +1,13 @@
 import { defineStore } from "pinia";
 
 export enum MenuBtt {
-    None  = "none",
-    File  = "file",
-    Edit  = "edit",
-    View  = "view",
-    Tools = "tools",
-    Help  = "help",
-    About = "about"
+    None  = "None",
+    File  = "File",
+    Edit  = "Edit",
+    View  = "View",
+    Tools = "Tools",
+    Help  = "Help",
+    About = "About"
 }
 
 export const useMainMenuStore = defineStore("MainMenuHandler", {
@@ -35,11 +35,7 @@ export const useMainMenuStore = defineStore("MainMenuHandler", {
         },
         mouseOutBtt(): void
         {
-            if (this.status !== status)
-                return;
             this.recordMouseBtt = false;
-            if (!this.recordMouseScr)
-                this.status = MenuBtt.None;
         },
         mouseInScr(): void
         {

@@ -15,16 +15,16 @@ async function openFileSelection() {
 
 <template>
     <ScrollMenuButton>
-      new
+      New
     </ScrollMenuButton>
     <ScrollMenuButton @click="openFileSelection()">
-      open
+      Open
     </ScrollMenuButton>
     <ScrollMenuButton>
-      close
+      Close
     </ScrollMenuButton>
     <ScrollMenuButton>
-      exit
+      Exit
     </ScrollMenuButton>
 </template>
 
