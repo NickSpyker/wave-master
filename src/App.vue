@@ -3,6 +3,5 @@
 </script>
 
 <template>
-  <NavMenu />
-  <MainMenu />
+  hello
 </template>
