@@ -3,7 +3,8 @@ import {defineProps, Ref, ref, onMounted} from "vue";
 
 const props = defineProps<{
     text: string,
-    haveDrawer: boolean
+    haveDrawer: boolean,
+    callBack: () => void
 }>();
 
 const openDrawer: Ref<boolean> = ref(false);
@@ -38,7 +39,9 @@ onMounted(() => button.value?.focus());
           <slot />
       </div>
   </div>
-  <button v-else>
+  <button v-else
+    @click="props.callBack()"
+  >
       {{ props.text }}
   </button>
 </template>

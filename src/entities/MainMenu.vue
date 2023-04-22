@@ -1,24 +1,26 @@
 <script setup lang="ts">
+import { useFileSore } from "@/store/file";
 
+const file = useFileSore();
 </script>
 
 <template>
   <div class="menu">
-      <MenuButton :text="'File'" :have-drawer="true">
-          <MenuButton :text="'New'"        :have-drawer="false" />
-          <MenuButton :text="'Open'"       :have-drawer="false" />
-          <MenuButton :text="'Close All'"  :have-drawer="false" />
-          <MenuButton :text="'Exit'"       :have-drawer="false" />
+      <MenuButton :text="'File'" :have-drawer="true" :call-back="() => {}">
+          <MenuButton :text="'New'"        :have-drawer="false" :call-back="() => {}"/>
+          <MenuButton :text="'Open'"       :have-drawer="false" :call-back="file.openFile"/>
+          <MenuButton :text="'Close All'"  :have-drawer="false" :call-back="() => {}"/>
+          <MenuButton :text="'Exit'"       :have-drawer="false" :call-back="() => {}"/>
       </MenuButton>
-      <MenuButton :text="'Edit'" :have-drawer="true">
-          <MenuButton :text="'Undo'"       :have-drawer="false" />
-          <MenuButton :text="'Redo'"       :have-drawer="false" />
+      <MenuButton :text="'Edit'" :have-drawer="true" :call-back="() => {}">
+          <MenuButton :text="'Undo'"       :have-drawer="false" :call-back="() => {}"/>
+          <MenuButton :text="'Redo'"       :have-drawer="false" :call-back="() => {}"/>
       </MenuButton>
-      <MenuButton :text="'View'" :have-drawer="true">
-          <MenuButton :text="'Appearance'" :have-drawer="false" />
+      <MenuButton :text="'View'" :have-drawer="true" :call-back="() => {}">
+          <MenuButton :text="'Appearance'" :have-drawer="false" :call-back="() => {}"/>
       </MenuButton>
-      <MenuButton :text="'Help'" :have-drawer="true">
-          <MenuButton :text="'About'"      :have-drawer="false" />
+      <MenuButton :text="'Help'" :have-drawer="true" :call-back="() => {}">
+          <MenuButton :text="'About'"      :have-drawer="false" :call-back="() => {}"/>
       </MenuButton>
   </div>
 </template>
