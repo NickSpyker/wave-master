@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  Pattern Workspace
+  <SideMenu>
+
+  </SideMenu>
 </template>
 
 <style scoped>

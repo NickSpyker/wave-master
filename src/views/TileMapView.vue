@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  TileMap Workspace
+  <SideMenu>
+
+  </SideMenu>
 </template>
 
 <style scoped>

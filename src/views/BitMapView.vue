@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  BitMap Workspace
+  <SideMenu>
+
+  </SideMenu>
 </template>
 
 <style scoped>

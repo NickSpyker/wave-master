@@ -14,7 +14,7 @@ div {
     left: 0;
     z-index: -1;
     height: 100%;
-    width: 150px;
+    width: 200px;
     position: absolute;
     box-shadow: 0 0 1px #000000;
     background-color: var(--gray800);

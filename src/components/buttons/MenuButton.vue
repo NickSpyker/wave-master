@@ -60,9 +60,11 @@ button {
 }
 .btt:hover {
     background-color: var(--gray700);
+    transition: all 0.25s;
 }
 .btt-drawer:hover {
     background-color: var(--gray500);
+    transition: all 0.25s;
 }
 .drawer {
     display: flex;
