@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { exit } from '@tauri-apps/api/process';
 import { useFileSore } from "@/store/file";
 
 const file = useFileSore();
+
+const stop = () => exit(0);
 </script>
 
 <template>
@@ -10,7 +13,7 @@ const file = useFileSore();
           <MenuButton :text="'New'"        :have-drawer="false" :call-back="() => {}"/>
           <MenuButton :text="'Open'"       :have-drawer="false" :call-back="file.openFile"/>
           <MenuButton :text="'Close All'"  :have-drawer="false" :call-back="() => {}"/>
-          <MenuButton :text="'Exit'"       :have-drawer="false" :call-back="() => {}"/>
+          <MenuButton :text="'Exit'"       :have-drawer="false" :call-back="stop"/>
       </MenuButton>
       <MenuButton :text="'Edit'" :have-drawer="true" :call-back="() => {}">
           <MenuButton :text="'Undo'"       :have-drawer="false" :call-back="() => {}"/>
