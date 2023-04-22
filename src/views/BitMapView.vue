@@ -4,7 +4,7 @@
 
 <template>
   <SideMenu>
-
+      BitMap Workspace
   </SideMenu>
 </template>
 

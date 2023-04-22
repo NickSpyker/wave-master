@@ -4,7 +4,7 @@
 
 <template>
   <SideMenu>
-
+      TileSet Workspace
   </SideMenu>
 </template>
 

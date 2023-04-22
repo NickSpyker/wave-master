@@ -4,7 +4,7 @@
 
 <template>
   <SideMenu>
-
+      Pattern Workspace
   </SideMenu>
 </template>
 
