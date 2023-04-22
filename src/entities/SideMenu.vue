@@ -4,7 +4,6 @@
 
 <template>
   <div class="side">
-      <div style="height: 73px" />
       <div style="position: relative">
           <slot />
       </div>
@@ -13,9 +12,8 @@
 
 <style scoped>
 .side {
-    top: 0;
+    top: 73px;
     left: 0;
-    z-index: -1;
     height: 100%;
     width: 250px;
     position: absolute;

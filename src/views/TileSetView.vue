@@ -7,18 +7,16 @@ const fileStore = useFileSore();
 <template>
   <SideMenu>
       <div class="files-box">
-          <p
-            v-for="file in fileStore.files()" :key="file"
-            style="margin-left: 20px; font-size: 10px"
-          >
-              {{ fileStore.getName(file) }}
-          </p>
+          <div v-for="path in fileStore.files()" :key="path">
+              <FileButton :path="fileStore.getName(path)" />
+          </div>
       </div>
   </SideMenu>
 </template>
 
 <style scoped>
 .files-box {
+    padding: 20px 0 0 20px;
     overflow: hidden;
 }
 </style>

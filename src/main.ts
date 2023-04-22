@@ -23,8 +23,10 @@ app.component("SideMenu", SideMenu);
  */
 import MenuButton from "@/components/buttons/MenuButton.vue";
 import NavButton from "@/components/buttons/NavButton.vue";
+import FileButton from "@/components/buttons/FileButton.vue";
 app.component("MenuButton", MenuButton);
 app.component("NavButton", NavButton);
+app.component("FileButton", FileButton);
 
 /*
  * View
