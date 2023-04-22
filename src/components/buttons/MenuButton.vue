@@ -11,6 +11,7 @@
 <style scoped>
 button {
     border: none;
+    cursor: pointer;
     font-size: 11px;
     margin: 0 0 0 0;
     color: var(--white);

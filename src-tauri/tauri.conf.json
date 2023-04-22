@@ -56,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 720,
+        "height": 864,
         "resizable": true,
         "title": "Wave Master",
-        "width": 1280
+        "width": 1536
       }
     ]
   }
