@@ -31,6 +31,19 @@ export const useFileSore = defineStore("FileHandler", {
             this.paths = this.paths.filter((value, index, array) => {
                 return array.indexOf(value) === index;
             });
+        },
+        files(): string[]
+        {
+            return this.paths;
+        },
+        getName(file: string): string
+        {
+            const index: number = file.lastIndexOf("/");
+            if (0 <= index) {
+                return file.substring(index + 1);
+            } else {
+                return file;
+            }
         }
     }
 })
