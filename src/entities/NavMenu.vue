@@ -29,6 +29,7 @@ div {
     display: flex;
     place-items: center;
     justify-content: center;
+    box-shadow: 0 0 1px #000000;
     background-color: var(--gray700);
 }
 </style>

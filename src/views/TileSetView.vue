@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  TileSet Workspace
+  <SideMenu>
+
+  </SideMenu>
 </template>
 
 <style scoped>

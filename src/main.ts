@@ -13,8 +13,10 @@ app.use(createPinia());
  */
 import MainMenu from "@/entities/MainMenu.vue";
 import NavMenu from "@/entities/NavMenu.vue";
+import SideMenu from "@/entities/SideMenu.vue";
 app.component("MainMenu", MainMenu);
 app.component("NavMenu", NavMenu);
+app.component("SideMenu", SideMenu);
 
 /*
  * Button
