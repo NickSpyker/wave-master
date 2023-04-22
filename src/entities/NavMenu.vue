@@ -6,16 +6,16 @@ const root = useRootSore();
 
 <template>
   <div>
-      <NavButton @click="root.changeWorkspace(Workspace.TileSet)">
+      <NavButton @click="root.changeWorkspace(Workspace.TileSet)" :is-actual="root.isWorkspace(Workspace.TileSet)">
           TileSet
       </NavButton>
-      <NavButton @click="root.changeWorkspace(Workspace.BitMap)">
+      <NavButton @click="root.changeWorkspace(Workspace.BitMap)"  :is-actual="root.isWorkspace(Workspace.BitMap)">
           BitMap
       </NavButton>
-      <NavButton @click="root.changeWorkspace(Workspace.Pattern)">
+      <NavButton @click="root.changeWorkspace(Workspace.Pattern)" :is-actual="root.isWorkspace(Workspace.Pattern)">
           Pattern
       </NavButton>
-      <NavButton @click="root.changeWorkspace(Workspace.TileMap)">
+      <NavButton @click="root.changeWorkspace(Workspace.TileMap)" :is-actual="root.isWorkspace(Workspace.TileMap)">
           TileMap
       </NavButton>
   </div>
