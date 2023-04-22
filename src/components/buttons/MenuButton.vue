@@ -31,7 +31,7 @@ onMounted(() => button.value?.focus());
       >
           {{ props.text }}
       </button>
-      <div v-if="openDrawer && props.haveDrawer" class="drawer"
+      <div v-if="openDrawer" class="drawer"
         :style="drawerPos"
         @mouseleave="openDrawer = !openDrawer"
       >
@@ -59,8 +59,10 @@ button:hover {
     background-color: var(--gray700);
 }
 .drawer {
-    width: 60px;
+    display: flex;
+    place-items: start;
     position: absolute;
+    flex-direction: column;
     box-shadow: 0 0 1px 0 #000000;
     background-color: var(--gray700);
 }
