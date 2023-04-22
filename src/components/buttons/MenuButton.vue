@@ -26,7 +26,7 @@ onMounted(() => button.value?.focus());
 </script>
 
 <template>
-  <div v-if="props.haveDrawer">
+  <div v-if="props.haveDrawer" class="btt">
       <button ref="button"
         @click="openDrawer = !openDrawer; setDrawerPos()"
       >
@@ -39,8 +39,8 @@ onMounted(() => button.value?.focus());
           <slot />
       </div>
   </div>
-  <button v-else
-    @click="props.callBack()"
+  <button v-else class="btt-drawer"
+          @click="props.callBack()"
   >
       {{ props.text }}
   </button>
@@ -58,8 +58,11 @@ button {
     padding: 5px 10px 5px 10px;
     font-family: "Fira Code", sans-serif;
 }
-button:hover {
+.btt:hover {
     background-color: var(--gray700);
+}
+.btt-drawer:hover {
+    background-color: var(--gray500);
 }
 .drawer {
     display: flex;
@@ -67,6 +70,6 @@ button:hover {
     position: absolute;
     flex-direction: column;
     box-shadow: 0 0 1px 0 #000000;
-    background-color: var(--gray700);
+    background-color: var(--gray600);
 }
 </style>
