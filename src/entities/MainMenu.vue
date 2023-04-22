@@ -4,8 +4,8 @@
 
 <template>
   <div>
-      <MenuButton>
-          File
+      <MenuButton :text="'File'" :have-drawer="true">
+          <MenuButton text="Open" :have-drawer="false" />
       </MenuButton>
   </div>
 </template>
