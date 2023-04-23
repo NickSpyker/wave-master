@@ -6,14 +6,14 @@ const root = useRootSore();
 
 <template>
 
-  <!-- Menu -->
-  <MainMenu />
-  <NavMenu  />
-
   <!-- Workspace -->
   <TileSetView      v-if="root.isWorkspace(Workspace.TileSet)" />
   <BitMapView  v-else-if="root.isWorkspace(Workspace.BitMap)"  />
   <PatternView v-else-if="root.isWorkspace(Workspace.Pattern)" />
   <TileMapView v-else-if="root.isWorkspace(Workspace.TileMap)" />
+
+  <!-- Menu -->
+  <NavMenu  />
+  <MainMenu />
 
 </template>

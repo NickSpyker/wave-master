@@ -30,11 +30,12 @@ const stop = () => exit(0);
 
 <style scoped>
 .menu {
-    display: flex;
-    flex-direction: row;
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
     background-color: var(--gray800);
 }
 </style>

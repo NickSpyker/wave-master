@@ -24,9 +24,11 @@ const root = useRootSore();
 <style scoped>
 div {
     left: 0;
+    top: 23px;
     width: 100%;
     height: 50px;
     display: flex;
+    position: absolute;
     place-items: center;
     justify-content: center;
     box-shadow: 0 0 1px #000000;
