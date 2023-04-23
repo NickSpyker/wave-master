@@ -40,4 +40,10 @@ app.component("BitMapView", BitMapView);
 app.component("PatternView", PatternView);
 app.component("TileMapView", TileMapView);
 
+/*
+ * Image handler
+ */
+import ImageDisplayer from "@/components/images/ImageDisplayer.vue";
+app.component("ImageDisplayer", ImageDisplayer);
+
 app.mount("#app");

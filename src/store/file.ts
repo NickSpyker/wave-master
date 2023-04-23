@@ -54,9 +54,9 @@ export const useFileSore = defineStore("FileHandler", {
         {
             return this.loaded === path;
         },
-        clearLoadedFile(): void
+        getLoadedFile(): string | null
         {
-            this.loaded = null;
+            return this.loaded;
         }
     }
 })

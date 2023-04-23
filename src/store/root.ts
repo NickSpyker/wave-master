@@ -1,10 +1,10 @@
 import { defineStore } from "pinia";
 
 export enum Workspace {
-    TileSet,
-    BitMap,
-    Pattern,
-    TileMap
+    TileSet = 0,
+    BitMap  = 1,
+    Pattern = 2,
+    TileMap = 3
 }
 
 export const useRootSore = defineStore("RootHandler", {
@@ -14,7 +14,6 @@ export const useRootSore = defineStore("RootHandler", {
     actions: {
         changeWorkspace(workspace: Workspace): void
         {
-            console.log(workspace);
             this.actual = workspace;
         },
         isWorkspace(workspace: Workspace): boolean
