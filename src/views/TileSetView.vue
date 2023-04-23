@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { useImageSore } from "@/store/image";
 import { useFileSore } from "@/store/file";
 
+const imageStore = useImageSore();
 const fileStore = useFileSore();
 </script>
 
@@ -14,7 +16,9 @@ const fileStore = useFileSore();
               <span v-if="fileStore.isLoadedFile(path)">
                  →
               </span>
-              <FileButton :path="fileStore.getName(path)" @click="fileStore.loadFile(path)" />
+              <FileButton :path="fileStore.getName(path)"
+                @click="fileStore.loadFile(path); imageStore.loadImage(path);"
+              />
           </div>
       </div>
   </SideMenu>
