@@ -8,7 +8,10 @@ const fileStore = useFileSore();
   <SideMenu>
       <div class="files-box">
           <div v-for="path in fileStore.files()" :key="path">
-              <FileButton :path="fileStore.getName(path)" />
+              <span v-if="fileStore.isLoadedFile(path)">
+                 →
+              </span>
+              <FileButton :path="fileStore.getName(path)" @click="fileStore.loadFile(path)" />
           </div>
       </div>
   </SideMenu>
@@ -16,7 +19,8 @@ const fileStore = useFileSore();
 
 <style scoped>
 .files-box {
-    padding: 20px 0 0 20px;
     overflow: hidden;
+    padding: 20px 0 0 20px;
+    width: calc(100% - 20px);
 }
 </style>

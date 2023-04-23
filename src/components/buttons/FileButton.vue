@@ -4,7 +4,6 @@ import { defineProps } from "vue";
 const props = defineProps<{
     path: string
 }>();
-
 </script>
 
 <template>
@@ -25,6 +24,6 @@ button {
     font-family: "Fira Code", sans-serif;
 }
 button:hover {
-    padding: 5px 0 5px 10px;
+    text-shadow: var(--white) 0 0 5px;
 }
 </style>

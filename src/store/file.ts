@@ -3,7 +3,8 @@ import { defineStore } from "pinia";
 
 export const useFileSore = defineStore("FileHandler", {
     state: () => ({
-        paths: [] as string[]
+        paths: [] as string[],
+        loaded: null as string | null
     }),
     actions: {
         async openFile()
@@ -44,6 +45,18 @@ export const useFileSore = defineStore("FileHandler", {
             } else {
                 return file;
             }
+        },
+        loadFile(path: string): void
+        {
+            this.loaded = path;
+        },
+        isLoadedFile(path: string): boolean
+        {
+            return this.loaded === path;
+        },
+        clearLoadedFile(): void
+        {
+            this.loaded = null;
         }
     }
 })
