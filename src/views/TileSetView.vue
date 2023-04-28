@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { useImageSore } from "@/store/image";
 import { useFileSore } from "@/store/file";
 
-const imageStore = useImageSore();
 const fileStore = useFileSore();
 </script>
 
@@ -14,10 +12,10 @@ const fileStore = useFileSore();
       <div class="files-box">
           <div v-for="path in fileStore.files()" :key="path">
               <span v-if="fileStore.isLoadedFile(path)">
-                 →
+                →
               </span>
               <FileButton :path="fileStore.getName(path)"
-                @click="fileStore.loadFile(path); imageStore.loadImage(path);"
+                @click="fileStore.loadFile(path)"
               />
           </div>
       </div>

@@ -5,7 +5,7 @@ const file = useFileSore();
 </script>
 
 <template>
-  <img :src="file.getLoadedFile()" alt="nothing to show" >
+  <img :src="file.getLoadedFile()" alt="" >
 </template>
 
 <style scoped>
