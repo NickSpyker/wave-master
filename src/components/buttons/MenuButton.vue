@@ -48,6 +48,7 @@ onMounted(() => button.value?.focus());
 
 <style scoped>
 button {
+    z-index: 1;
     border: none;
     cursor: pointer;
     font-size: 11px;
@@ -67,6 +68,7 @@ button {
     transition: all 0.25s;
 }
 .drawer {
+    z-index: 1;
     display: flex;
     place-items: start;
     position: absolute;
