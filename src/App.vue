@@ -13,7 +13,7 @@ const root = useRootSore();
   <TileMapView v-else-if="root.isWorkspace(Workspace.TileMap)" />
 
   <!-- Menu -->
-  <NavMenu  />
   <MainMenu />
+  <NavMenu  />
 
 </template>
